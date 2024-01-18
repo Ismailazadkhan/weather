@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Weather App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
 <link rel="stylesheet" type="text/css" href="weather.css">
   <script type="text/javascript" src="weather.js"></script>
 
 </head>
 <body>
-  <div class="container">
-    <h1>Weather App</h1>
-    <input type="text" id="cityInput" placeholder="Enter city">
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="weatherInfo"></div>
-  </div>
-  <script src="script.js"></script>
+    <h2 id="heading">Weather App</h2>
+    <p>This weather app fetches the weather data from an external API. Please note that this code requires a valid API key to fetch the data.</p>
+
+    <form id="locationForm">
+        <input type="text" id="location" placeholder="Enter city name">
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div id="weatherInfo">
+        <p><strong>City:</strong> <span id="city"></span></p>
+        <p><strong>Temperature:</strong> <span id="temp"></span> °C</p>
+        <p><strong>Description:</strong> <span id="description"></span></p>
+    </div>
+
+    <script>
+        // JavaScript code to fetch and display weather data goes here
+    </script>
 </body>
 </html>
