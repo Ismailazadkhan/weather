@@ -8,6 +8,6 @@ document.getElementById('add').addEventListener('click', function () {
       document.getElementById('description').textContent = data.weather[0].description;
       document.getElementById('temp').textContent = Math.round(data.main.temp - 273.15) + '°C';
       document.getElementById('wind').textContent = Math.round(data.wind.speed) + 'm/s';
-     document.getElementById('humidity'); humidityElement.textContent = `Humidity: ${humidity}%`;
+      
     });
 });
