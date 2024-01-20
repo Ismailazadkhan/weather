@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Weather Appsolet</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Weather Appsolet</h1>
-        <input type="text" id="locationInput" placeholder="Enter a city">
-        <button id="searchButton">Search</button>
-        <div class="weather-info">
-            <h2 id="location"></h2>
-            <img src="https://www.iosicongallery.com/icons/weather-2021-12-07/">
-            <p id="temperature"></p>
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <section class="main">
+        <section class="inputs">
+          <input type="text" placeholder="Enter any city..." id="cityinput" />
+          <input type="submit" value="Submit" id="add" />
+          <button placeholder="submit" id="add"></button>
+        </section>
+
+        <section class="display">
+          <div class="wrapper">
+            <h2 id="cityoutput"></h2>
             <p id="description"></p>
-            <p id="windSpeed"></p>
-        </div>
+            <p id="temp"></p>
+            <p id="wind"></p>
+          </div>
+        </section>
+      </section>
+      <script src="app.js"></script>
     </div>
-    <script src="app.js"></script>
-</body>
+  </body>
 </html>
