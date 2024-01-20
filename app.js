@@ -10,6 +10,4 @@ document.getElementById('add').addEventListener('click', function () {
       document.getElementById('wind').textContent = Math.round(data.wind.speed) + 'm/s';
      document.getElementById('humidity'); humidityElement.textContent = `Humidity: ${humidity}%`;
     });
-.catch(err => alert('You entered Wrong city name, Try with Correct'))
- 
 });
