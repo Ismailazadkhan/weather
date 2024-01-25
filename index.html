@@ -1,24 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
- <head>
-    <title>Weather update</title>
-   <link rel="stylesheet" href="style.css" />
- </head>
-
- <body>
-    <h1>Weather update</h1>
-   <section class="inputs">
-      <input type="text" placeholder="Enter any city..." id="cityinput" />
-      <input type="submit" value="Submit" id="add" />
-    </section>
-   <section class="display">
-      <h2 id="cityoutput"></h2>
-      <h3 id="description"></h3>
-      <p id="temp"></p>
-      <p id="wind"></p>
-    </section>
-
-    <script src="app.js"></script>
- </body>
+<html>
+<head>
+<title>Weather App</title>
+<link rel="stylesheet" href="style.css"> </head>
+<body>
+  <input type="text" id="cityInput" placeholder="Enter a city name">
+  <button id="searchButton">Search</button>
+  <div id="weatherInfo"></div>
+  <script src="script.js"></script> </body>
 </html>
