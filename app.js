@@ -19,5 +19,5 @@ cityInput.addEventListener("keydown", (event) => {
     const city = cityInput.value;
     getWeatherData(city);
       
-    }
+    });
 });
