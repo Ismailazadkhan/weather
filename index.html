@@ -1,76 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-
-    #weather-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    #weather-icon {
-      width: 100px;
-      height: 100px;
-    }
-
-    #temperature {
-      font-size: 2em;
-      margin: 10px 0;
-    }
-
-    #description {
-      font-size: 1.5em;
-    }
-  </style>
+  
+      <div class="logo"> </div>
+      <img src="4.png" alt="logo" height="250px" width="250px">
+    <div class="title">Weather Update</div>
+ 
+  <marquee>This weather update app is made by Ismail azad khan, Introducing the latest in weather technology, My new weather app is designed to provide you with the most accurate and up-to-date weather information. With a user-friendly interface and customizable features,  </marquee>
+  
 </head>
+
 <body>
 
-<div id="weather-container">
-  <h1>Weather App</h1>
-  <img id="weather-icon" src="" alt="Weather Icon">
-  <p id="temperature"></p>
-  <p id="description"></p>
-  <button onclick="getWeather()">Get Weather</button>
-</div>
 
-<script>
-  function getWeather() {
-    // Replace 'YOUR_API_KEY' with your actual API key
-    const apiKey = '4b3d324d8f4b9d9afd39e985e8864db1';
-    const cityName = 'Islamabad'; // Replace with the desired city name
+  <div class="container">
+    <form id="weather-form">
+      <input type="text" id="city-input" placeholder="Enter city name">
+      <div id="button">
+        <button type="submit">Get Weather</button>
+        
+    </form>
 
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${4b3d324d8f4b9d9afd39e985e8864db1}&units=metric`;
+    
+    
+    <div id="weather-data"></div>
+    <img src="weather-clouds.jpg" alt="Image" class="image" height="280" width="220">
 
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const weatherIcon = data.weather[0].icon;
-        const temperature = data.main.temp;
-        const description = data.weather[0].description;
 
-        document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${weatherIcon}.png`;
-        document.getElementById('temperature').innerText = `${temperature} °C`;
-        document.getElementById('description').innerText = description;
-      })
-      .catch(error => {
-        console.error('Error fetching weather data:', error);
-        alert('Error fetching weather data. Please try again.');
-      });
-  }
-</script>
-
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </body>
+
 </html>
